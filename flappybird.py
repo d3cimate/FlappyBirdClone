@@ -97,7 +97,7 @@ pygame.init()
 window = pygame.display.set_mode((576,1024))
 clock = pygame.time.Clock()
 gameFont = pygame.font.Font('04B_19.TTF', 40)
-
+pygame.display.set_caption('Flappy Bird :3')
 flapSound = pygame.mixer.Sound('sound/sfx_wing.wav')
 deathSound = pygame.mixer.Sound('sound/sfx_hit.wav')
 scoreSound = pygame.mixer.Sound('sound/sfx_point.wav')
@@ -143,6 +143,10 @@ pipeHeight = [400, 600, 800]
 
 while True:
     for event in pygame.event.get():
+        # if event.type == pygame.K_m:
+        #     pygame.mixer.music.pause()
+        # if event.type == pygame.K_n:
+        #     pygame.mixer.music.unpause()
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
